@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+.votes {
+  display: flex;
+  gap: 15px;
+}
+
+.joke-details {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+}
