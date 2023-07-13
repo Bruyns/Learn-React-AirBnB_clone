@@ -20,17 +20,17 @@ Notes:
 */
 
 export default function Card(props) {
-    return (
-        <div className="card">
-            <img src={props.img} />
-            <div className="card--stats">
-                <img className="card--star" src={props.ratingImg}/>
-                <span>{props.rating}</span>
-                <span className="gray">({props.reviewCount}) • </span>
-                <span className="gray">{props.country}</span>
-           </div>
-                <p>{props.title}</p>
-                <p><span className="bold">From ${props.price}</span> / person</p>
-        </div>
-    )
+  return (
+      <div className="card">
+          <img  className="card--image" src={props.image} />
+          <div className="card--stats">
+              <img src="./src/images/star.png" className="card--star" />
+              <span>{props.stats1}</span>
+              <span className="gray">({props.stats2}) • </span>
+              <span className="gray">{props.location}</span>
+          </div>
+          <p>{props.title}</p>
+          <p><span className="bold">From ${props.price}</span> / person</p>
+      </div>
+  )
 }
