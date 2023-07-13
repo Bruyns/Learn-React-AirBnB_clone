@@ -29,23 +29,22 @@ still be block elements, stacked vertically. We'll add styling later.
 */
 
 export default function App() {
+            // hero />
   const profileDetails = data.map((item) => {
-    return <Card 
-                  id = {item.id}
-                  title = {item.title}
-                  description = {item.description}
-                  price = {item.price}
-                  image = {item.coverImg}
-                  stats1 = {item.stats.rating} 
-                  stats2 = {item.stats.reviewCount} 
-                  location = {item.location}
-                  openSpots = {item.openSpots}
-                  />
+    return (
+            <Card 
+                  key = {item.id}
+                  {...item}
+            />
+        )
   })
+
     return (
       <div>
         <Navbar />
+        <section className="card--list">
         {profileDetails}
+        </section>
         <Main />
       </div>
     )
